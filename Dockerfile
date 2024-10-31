@@ -4,7 +4,7 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17-jdk-slim
 COPY --from=build /target/ecommerce-docker.jar demo.jar
 EXPOSE 8080
-ENTRYPOINT["java","-jar","demo.jar"]
+ENTRYPOINT ["java","-jar","demo.jar"]
 
 
 
